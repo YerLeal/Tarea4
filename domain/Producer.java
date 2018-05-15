@@ -42,17 +42,18 @@ public class Producer extends Character {
                     if (movimiento == -50) {
                         bandera = 1;
                         ram = ThreadLocalRandom.current().nextInt(1, 20);
+                        System.out.println("Producer: " + ram);
                         image = 1;
                     }
                     super.setX(movimiento);
-                } else if (movimiento <= 500 && bandera == 1) {
+                } else if (movimiento <= 490 && bandera == 1) {
                     movimiento += 2;
                     if (image == 3) {
                         image = 1;
                     }
                     super.setImage(sprite.get(image));
                     image++;
-                    if (movimiento == 500) {
+                    if (movimiento == 490) {
                         bandera = 0;
                         super.setImage(sprite.get(0));
                         this.sharedLocation.set(image);

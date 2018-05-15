@@ -58,6 +58,7 @@ public class Consumer extends Character {
                     if (movimiento == 1200) {
                         bandera = 0;
                         ram = ThreadLocalRandom.current().nextInt(1, 20);
+                        System.out.println("Consumer: " + ram);
                         image = 1;
                     }
                 }

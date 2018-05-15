@@ -88,7 +88,6 @@ public class Window extends Application implements Runnable {
                 elapsed = System.nanoTime() - start;
                 wait = time - elapsed / 1000000;
                 Thread.sleep(wait);
-
                 draw(this.gc);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Window.class.getName()).log(Level.SEVERE, null, ex);
@@ -99,8 +98,8 @@ public class Window extends Application implements Runnable {
     private void draw(GraphicsContext gc) {
         gc.clearRect(0, 0, 1200, 700);
         gc.drawImage(this.fondo, 0, 0, 1200, 700);
-        gc.drawImage(this.producer.getImage(), this.producer.getX(), this.producer.getY(), 60, 60);
-        gc.drawImage(this.consumer.getImage(), this.consumer.getX(), this.consumer.getY(), 50, 80);
+        gc.drawImage(this.producer.getImage(), this.producer.getX(), this.producer.getY(), 80, 60);
+        gc.drawImage(this.consumer.getImage(), this.consumer.getX(), this.consumer.getY(), 80, 80);
         gc.drawImage(this.product.getImage(), this.product.getX(), this.product.getY(), 40, 40);
     } // draw
 
